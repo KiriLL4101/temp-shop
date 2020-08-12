@@ -1,0 +1,45 @@
+.container {
+  max-width: 260px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.week {
+  display: flex;
+  justify-content: space-between;
+}
+.check {
+  padding: 0.5rem;
+}
+
+.week__day {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.week__day-title {
+  width: 32px;
+  height: 32px;
+  padding: 0.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid darkturquoise;
+}
+
+.week__day:checked + .week__day-title {
+  background-color: turquoise;
+  color: linen;
+}
+
+.week__day:focus + .week__day-title {
+  border: 1px solid darkturquoise;
+}
+
+.week__day:hover:not(:checked) + .week__day-title {
+  background-color: rgba(64, 224, 208, 0.644);
+}
